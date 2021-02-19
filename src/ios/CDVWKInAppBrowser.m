@@ -1131,7 +1131,7 @@ BOOL isExiting = FALSE;
 // change that value.
 //
 - (float) getStatusBarOffset {
-    return (float) 0.0;
+    return (float) ((float) [[UIApplication sharedApplication] statusBarFrame].size.height > 20.0 ? [[UIApplication sharedApplication] statusBarFrame].size.height : 0.0);
 }
 
 - (void) rePositionViews {
